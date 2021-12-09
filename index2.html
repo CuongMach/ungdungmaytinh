@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<h2>Caculator</h2>
+    <input type="number" id="a" value="">
+    <input type="number" id="b" value="">
+    <div>
+        <input type="button" value="addition(+)" onclick="phepcong()">
+        <input type="button" value="subtraction(-)" onclick="pheptru()">
+        <input type="button" value="mutiplication(x)" onclick="phepnhan()">
+        <input type="button" value="division(/)" onclick="phepchia()">
+    </div>
+    <b id="ketqua"></b>
+</body>
+</html>
+<script>
+    function phepcong() {
+        let a1 = parseFloat(document.getElementById("a").value)
+        let a2 = parseFloat(document.getElementById("b").value)
+        tong = a1 + a2
+        document.getElementById("ketqua").innerHTML = "Result Divion: " + tong
+    }
+
+          function pheptru() {
+        let a1 = parseFloat(document.getElementById("a").value)
+        let a2 = parseFloat(document.getElementById("b").value)
+        hieu = a1 - a2
+        document.getElementById("ketqua").innerHTML = "Result Divion: " + hieu
+    }
+
+          function phepnhan() {
+        let a1 = parseFloat(document.getElementById("a").value)
+        let a2 = parseFloat(document.getElementById("b").value)
+        tich = a1 * a2
+        document.getElementById("ketqua").innerHTML = "Result Divion: " + tich
+    }
+
+          function phepchia() {
+        let a1 = parseFloat(document.getElementById("a").value)
+        let a2 = parseFloat(document.getElementById("b").value)
+        thuong = a1 + a2
+        document.getElementById("ketqua").innerHTML = "Result Divion: " + thuong
+    }
+
+</script>
