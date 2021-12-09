@@ -5,7 +5,6 @@
     <title>Đổi tiền tệ</title>
 </head>
 <body>
-<form>
     <table>
         <tr>
             <td align="center">Amount</td>
@@ -15,53 +14,39 @@
         <tr>
             <td><input type="text" id="money"></td>
             <td><select name="VN" id="quocgia">
-                <option value="Chọn quốc gia">Chọn quốc gia</option>
-                <option value="1" id="VND">Việt Nam</option>
-                <option value="23.000" id="USD">Mỹ</option>
+                <option value="" selected>Chọn quốc gia</option>
+                <option value="1">Việt Nam</option>
+                <option value="2">Mỹ</option>
             </select>
             </td>
             <td><select name="USD" id="quocgia2">
-                <option value="Chọn loại tiền">Chọn quốc gia</option>
-                <option value="23000">Mỹ</option>
+                <option value="" selected>Chọn quốc gia</option>
                 <option value="1">Việt Nam</option>
+                <option value="2">Mỹ</option>
             </select>
             </td>
             <td>
-                <input type="button" id="bt1" value="convert" onclick="myFunction()">
+                <input type="button" value="convert" onclick="myFunction()">
             </td>
         </tr>
     </table>
-</form>
+    <div id="123 "></div>
 <script>
-  function myFuntion() {
-      let x = document.getElementById("quocgia").value;
-      let y = parseInt( prompt(document.getElementById(money)).value)
-      let z = document.getElementById(VND)
-      let a = document.getElementById(USD)
-      if
-      (form = 23000)
-      let b = x * 23000
-      alert(b + "VND")
-      if
-      (form = 1)
-      let c = x / 23000
-      alert(c + "USD")
+    function myFunction(){
+        let select1 = document.getElementById("quocgia").value;
+        let select2 = document.getElementById("quocgia2").value;
+        let sotiengoc = parseInt(document.getElementById("money").value);
+        if (select1 == select2) {
+            document.getElementById("123").innerHTML = "Nhập lại quốc gia";
+        }
+        if ( select1 == "1" && select2 == "2") {
+            document.getElementById("123").innerHTML = "Result :" + sotiengoc/23000 + "$";
 
-  }
-
-
+        }
+        if ( select1 == "2" && select2 == "1") {
+            document.getElementById("123").innerHTML = "Result :" + sotiengoc*23000 + "VND";
+        }
+    }
 </script>
 </body>
 </html>
-<!--function myFunction() {-->
-<!--let form = document.getElementById("quocgia").value;-->
-<!--let sotiennhap = parseInt(document.getElementById("money").value);-->
-<!--let sotienchuyen;-->
-<!--if (form = 23000) sotienchuyen = sotiennhap*23000;-->
-<!--alert( sotiennhap*23000 + "VND");-->
-<!--let form2 = document.getElementById("quocgia1").value;-->
-<!--let sotiennhap2 = parseInt(document.getElementById("money").value)-->
-<!--let sotienchuyen2-->
-<!--if (form2 = 1) sotienchuyen2 = sotiennhap2 / 23000-->
-<!--alert( sotiennhap2 / 23000 + "USD")-->
-<!--}-->
